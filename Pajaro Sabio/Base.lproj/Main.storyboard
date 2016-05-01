@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="atU-e4-fQT">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Buscar-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pajaro_Sabio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondoSolido" translatesAutoresizingMaskIntoConstraints="NO" id="yvp-bJ-4Bg">
+                                <rect key="frame" x="273" y="128" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="W0X-h1-ge2"/>
+                                    <constraint firstAttribute="height" constant="55" id="cA6-9d-VPg"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="bmG-ap-sxV">
+                                <rect key="frame" x="20" y="272" width="560" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="05K-Vi-WBl"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.1529411765" green="0.59999999999999998" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8T-Yr-LYU">
+                                <rect key="frame" x="20" y="491" width="560" height="89"/>
+                                <color key="backgroundColor" red="0.1529411765" green="0.59999999999999998" blue="0.85490196080000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="194" id="cGJ-k2-Bru"/>
+                                    <constraint firstAttribute="height" constant="89" id="i6n-Pk-FId"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <state key="normal" title="Calcular">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cGJ-k2-Bru"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="calcularAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="78O-KL-OhB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.30588235289999999" green="0.41568627450000001" blue="0.47058823529999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="A8T-Yr-LYU" secondAttribute="bottom" constant="20" id="1KB-Ja-M0P"/>
+                            <constraint firstItem="bmG-ap-sxV" firstAttribute="top" secondItem="yvp-bJ-4Bg" secondAttribute="bottom" constant="89" id="9DR-kP-UyV"/>
+                            <constraint firstItem="yvp-bJ-4Bg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9dn-EN-ZtS"/>
+                            <constraint firstItem="A8T-Yr-LYU" firstAttribute="trailing" secondItem="bmG-ap-sxV" secondAttribute="trailing" id="BBQ-u7-Uqw"/>
+                            <constraint firstItem="bmG-ap-sxV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Whq-KJ-Xkh"/>
+                            <constraint firstItem="bmG-ap-sxV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c6t-zd-xnd"/>
+                            <constraint firstItem="A8T-Yr-LYU" firstAttribute="leading" secondItem="bmG-ap-sxV" secondAttribute="leading" id="dFU-ss-qNH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bmG-ap-sxV" secondAttribute="trailing" id="dyp-fC-QjT"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bmG-ap-sxV" secondAttribute="leading" id="nxP-Jn-biN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buscar" id="NOc-Cz-8hh"/>
+                    <connections>
+                        <outlet property="searchBar" destination="bmG-ap-sxV" id="09M-Va-XZ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1093" y="369"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="S49-ZB-NYh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="atU-e4-fQT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HPm-e1-dyD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AwJ-3h-SKd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z88-BD-Urz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="369"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fondoSolido" width="1139" height="926"/>
+    </resources>
+</document>
